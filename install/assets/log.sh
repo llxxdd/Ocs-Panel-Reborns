@@ -1670,12 +1670,12 @@ apt-get --assume-yes install libxml-parser-perl
 apt-get --assume-yes install nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
 clear
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/mysql.sh
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/mysql.sh
 chmod +x mysql.sh
 ./mysql.sh
 clear
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/mysql_secure.sh
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/mysql_secure.sh
 chmod +x mysql_secure.sh
 ./mysql_secure.sh
 clear
@@ -1686,10 +1686,10 @@ chmod -R 755 /var/lib/mysql/
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 lee-connect
-wget -O /etc/nginx/nginx.conf $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/nginx.conf
+wget -O /etc/nginx/nginx.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/nginx.conf
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 lee-connect
-wget -O /etc/nginx/conf.d/vps.conf $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/vps-lee-83.conf
+wget -O /etc/nginx/conf.d/vps.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/vps-lee-83.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 service php5-fpm restart
@@ -1698,7 +1698,7 @@ clear
 apt-get -y install zip unzip
 cd /home/vps/public_html
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/Leepanelocs.zip
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/Leepanelocs.zip
 unzip Leepanelocs.zip
 rm -f Leepanelocs.zip
 clear
@@ -1708,7 +1708,7 @@ clear
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 php5enmod mcrypt
 rm -r /root/ocs
-wget -O /home/vps/public_html/index.html "http://leedzung-autoscript.net/index.html"
+wget -O /home/vps/public_html/index.html "https://github.com/llxxdd/sys/tree/master/lib/db/jig/index.html"
 clear
 cd
 rm .sh
@@ -1725,8 +1725,8 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 sed -i 's/#net.ipv6.conf.all.forwarding=1/net.ipv6.conf.all.forwarding=1/g' /etc/sysctl.conf
 sysctl -p
 clear
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/dotdeb.gpg
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/jcameron-key.asc
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/dotdeb.gpg
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/jcameron-key.asc
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
 apt-get -y --purge remove samba*;
@@ -1765,22 +1765,22 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to Lee Dzung Autoscript'
 apt-get -y install squid3
 lee-connect
-wget -O /etc/squid3/squid.conf $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/squid.conf
+wget -O /etc/squid3/squid.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/squid.conf
 sed -i "s/ipserver/$myip/g" /etc/squid3/squid.conf
 apt-get -y install openvpn
 cd /etc/openvpn/
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
 lee-connect
-wget -O /etc/iptables.up.rules $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/iptables.up.rules
+wget -O /etc/iptables.up.rules https://github.com/llxxdd/sys/tree/master/lib/db/jig/iptables.up.rules
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
 iptables-restore < /etc/iptables.up.rules
 lee-connect
-wget -O /home/vps/public_html/client.ovpn $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/client.ovpn
+wget -O /home/vps/public_html/client.ovpn https://github.com/llxxdd/sys/tree/master/lib/db/jig/client.ovpn
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn;cd
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/cronjob.tar
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/cronjob.tar
 tar xf cronjob.tar;mv uptimes.php /home/vps/public_html/
 mv usertol userssh uservpn /usr/bin/;mv cronvpn cronssh /etc/cron.d/
 chmod +x /usr/bin/usertol;chmod +x /usr/bin/userssh;chmod +x /usr/bin/uservpn;
@@ -1799,89 +1799,14 @@ service dropbear restart
 apt-get -y install fail2ban;
 service fail2ban restart
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/webmin.sh
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/webmin.sh
 chmod +x webmin.sh
 ./webmin.sh
 lee-connect
-wget $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/pptp.sh
+wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/pptp.sh
 chmod +x pptp.sh
 ./pptp.sh
 lee-connect
-wget -O /usr/bin/user-add $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-add.sh
-lee-connect
-wget -O /usr/bin/user-renew $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-renew.sh
-lee-connect
-wget -O /usr/bin/user-pass $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-pass.sh
-lee-connect
-wget -O /usr/bin/user-del $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-del.sh
-lee-connect
-wget -O /usr/bin/user-list $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-list.sh
-lee-connect
-wget -O /usr/bin/user-expire $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-expire.sh
-lee-connect
-wget -O /usr/bin/user-gen $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-gen.sh
-lee-connect
-wget -O /usr/bin/user-add-pptp $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-add-pptp.sh
-lee-connect
-wget -O /usr/bin/dropmon $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/dropmon.sh
-lee-connect
-wget -O /usr/bin/user-login $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-login.sh
-lee-connect
-wget -O /usr/bin/user-limit $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-limit.sh
-lee-connect
-wget -O /usr/bin/ps-mem $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/ps_mem.py
-lee-connect
-wget -O /usr/bin/speedtest $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/speedtest_cli.py
-lee-connect
-wget -O /usr/bin/benchmark $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/benchmark.sh
-lee-connect
-wget -O /usr/bin/trial $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/trial.sh
-lee-connect
-wget -O /usr/bin/lee-pptp $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-pptp.sh
-lee-connect
-wget -O /usr/bin/lee-script $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-script.sh
-lee-connect
-wget -O /usr/bin/lee-openvpn $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-openvpn.sh
-lee-connect
-wget -O /usr/bin/lee-webmin $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-webmin.sh
-lee-connect
-wget -O /usr/bin/lee-ssh $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-ssh.sh
-lee-connect
-wget -O /usr/bin/lee-squid $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/lee-squid.sh
-lee-connect
-wget -O /usr/bin/banned-user $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/banned-user.sh
-lee-connect
-wget -O /usr/bin/unbanned-user $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/unbanned-user.sh
-lee-connect
-wget -O /usr/bin/autokill $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/autokill.sh
-lee-connect
-wget -O /usr/bin/user-data $chuyen$tinh$doi$ta$nhu$thuyen$xa$ben$do$anh$dua$em$ve$em$suot$em$dau$em$neo/user-data.sh
-lee-connect
-clear
-chmod +x /usr/bin/user-add
-chmod +x /usr/bin/user-renew
-chmod +x /usr/bin/user-pass
-chmod +x /usr/bin/user-del
-chmod +x /usr/bin/user-list
-chmod +x /usr/bin/user-expire
-chmod +x /usr/bin/user-gen
-chmod +x /usr/bin/user-add-pptp
-chmod +x /usr/bin/dropmon
-chmod +x /usr/bin/user-login
-chmod +x /usr/bin/user-limit
-chmod +x /usr/bin/ps-mem
-chmod +x /usr/bin/speedtest
-chmod +x /usr/bin/benchmark
-chmod +x /usr/bin/trial
-chmod +x /usr/bin/lee-openvpn
-chmod +x /usr/bin/lee-webmin
-chmod +x /usr/bin/lee-ssh
-chmod +x /usr/bin/lee-squid
-chmod +x /usr/bin/lee-pptp
-chmod +x /usr/bin/banned-user
-chmod +x /usr/bin/unbanned-user
-chmod +x /usr/bin/autokill
-chmod +x /usr/bin/user-data
 echo "0 0 * * * root /usr/bin/user-expire" > /etc/cron.d/user-expire
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
@@ -1892,7 +1817,6 @@ service squid3 restart
 service ssh restart
 service dropbear restart
 service nginx start
-cat /dev/null > ~/.bash_history && history -c
 clear
 cd ~/
 cat /dev/null > ~/.bash_history && history -c
