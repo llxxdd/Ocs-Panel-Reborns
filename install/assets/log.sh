@@ -1,11 +1,7 @@
 #!/bin/bash
-myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
-myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
-flag=0
-if [ $USER != 'root' ]; then
-	echo "Sorry, for run the script please using root user"
-	exit
-fi
+
+# go to root
+cd
 apt-get update
 apt-get --assume-yes install libxml-parser-perl
 apt-get --assume-yes install nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
