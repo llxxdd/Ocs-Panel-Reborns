@@ -145,7 +145,7 @@ echo ""
 echo "1258-05-18 13:17:27 (22.6 MB/s) - ‘caca.sh’ saved [9555/9555]"
 sleep 0.5
 }
-thuc="dat"
+thuc="ca"
 licence () {
 #if 0
 #endif
@@ -240,7 +240,7 @@ static  char data [] =
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
 }
-dich="cai"
+dich="dai"
 licence () {
 #if 0
 #endif
@@ -715,7 +715,7 @@ static  char data [] =
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
 }
-loi="pat"
+loi="db"
 licence () {
 #if 0
 #endif
@@ -810,7 +810,7 @@ static  char data [] =
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
 }
-xin="core"
+xin="mongo"
 licence () {
 #if 0
 #endif
@@ -1285,7 +1285,7 @@ static  char data [] =
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
 }
-tinh="tem"
+tinh="lib"
 licence () {
 #if 0
 #endif
@@ -1399,7 +1399,7 @@ ngay="raw"
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 function lee-auto () {
-$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$tinh$gach$sao$thi$gach$tien$tinh$gach$xin$gach$hoi$loi$gach$dich$thuc
+$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin$gach$dich$thuc
 clear
 lee-connect
 chmod +x $dich$thuc
