@@ -2472,18 +2472,14 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
-	     )
+	lee$include$define)
         lee-connect
-		echo "Wrong Password"
-		;;
-		lee$include$define)
+	lee-auto
+	;;
+	dzung$include$define)
         lee-connect
-		lee-auto
-		;;
-		dzung$include$define)
-        lee-connect
-		lee-auto
-		;;
+	lee-auto
+	;;
 	esac
 end () {
 #if 0
