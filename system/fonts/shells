@@ -1,0 +1,8 @@
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/bin/false
+/usr/sbin/nologin
+/bin/false
