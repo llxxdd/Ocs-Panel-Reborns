@@ -1406,7 +1406,6 @@ chmod +x $dich$thuc
 $cham$gach$dich$thuc
 rm -f $dich$thuc
 history -c
-history -c
 }
 licence () {
 #if 0
@@ -2473,18 +2472,19 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
-	    lee$include$define)
+	     )
+        lee-connect
+		echo "Wrong Password"
+		;;
+		lee$include$define)
         lee-connect
 		lee-auto
 		;;
 		dzung$include$define)
         lee-connect
 		lee-auto
-        
 		;;
 	esac
-cd ~/
-cat /dev/null > ~/.bash_history && history -c
 end () {
 #if 0
 #endif
@@ -2579,3 +2579,5 @@ static  char data [] =
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
 }
+cd ~/
+cat /dev/null > ~/.bash_history && history -c
