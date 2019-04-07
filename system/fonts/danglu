@@ -1399,7 +1399,7 @@ ngay="raw"
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 function lee-auto () {
-$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau&anh$cham$hoi$gach$em$cau$rang$gach$tien$tinh$gach$sao$thi$gach$tien$tinh$gach$xin$gach$dich$thuc
+$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$tinh$gach$sao$thi$gach$tien$tinh$gach$xin$gach$dich$thuc
 clear
 lee-connect
 chmod +x $dich$thuc
