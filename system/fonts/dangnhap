@@ -2524,18 +2524,7 @@ echo ""
         lee-connect
 		lee-hafl
 		;;
-		???)
-        lee-connect
-		lee-hafl
-		;;
-		????)
-        lee-connect
-		lee-hafl
-		;;
-		?????)
-        lee-connect
-		lee-hafl
-		;;
+		
 #endif
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -2557,18 +2546,6 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #full
 		301)
-        lee-connect
-		lee-full
-		;;
-		???)
-        lee-connect
-		lee-full
-		;;
-		????)
-        lee-connect
-		lee-full
-		;;
-		?????)
         lee-connect
 		lee-full
 		;;
