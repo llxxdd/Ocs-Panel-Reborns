@@ -1645,19 +1645,12 @@ static  char data [] =
 #endif
 }
 tien="sys"
-function lee-sleep () {
+function lee-cek () {
 echo ""
-sleep 0.5
-echo -e "\e[0;31mConnecting to Lee Dzung server.......\e[0;0m"
-sleep 0.5
-    echo -e "\e[0;32mConnected\e[0;0m"
-       echo ""
-sleep 0.5 
-    echo -e "\e[0;31mCheck autoscript license.......\e[0;0m"
- sleep 0.5    
-       echo -e "\e[0;00mI AM SORRY YOUR FUNCTION ITS LOCKED!\e[0;0m"
-sleep 0.5
-       echo -e "\e[0;00mContact admin to unlock...Thank you very much!!!\e[0;0m"
+sleep 2
+echo -e "\e[0;31mYour password checking in lee dzung systems. Please waiting..............\e[0;0m"
+sleep 1
+    echo -e "\e[0;32mChecked finished.\e[0;0m"
        echo ""
 sleep 0.5
 }
@@ -2521,6 +2514,7 @@ echo ""
 #	define PTRACE_ATTACH	PT_ATTACH
 #hafl
         2013)
+	
         lee-connect
 		lee-hafl
 		;;
