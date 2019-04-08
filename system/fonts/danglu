@@ -2424,7 +2424,7 @@ echo ""
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		 
-		if [ option1 = "$option1" ]; then
+		if [ option1 ]; then
 	echo "Sorry, for run the script please using root user"
 	exit
 		
