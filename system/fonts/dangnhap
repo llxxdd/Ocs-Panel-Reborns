@@ -1648,10 +1648,10 @@ tien="sys"
 function lee-cek () {
 sleep 0.5
 echo -e "\e[0;31mYour password checking in lee dzung systems. Please waiting..............\e[0;0m"
-sleep 2
+sleep 5
     echo -e "\e[0;32mChecked finished.\e[0;0m"
        echo ""
-sleep 0.5
+sleep 1
 }
 licence () {
 #if 0
@@ -2459,9 +2459,6 @@ sleep 0.5
     echo -e "\e[0;31mCheck autoscript license.......\e[0;0m"
  sleep 0.5    
        echo -e "\e[0;00mDone\e[0;0m"
-sleep 0.5
-       echo -e "\e[0;00mThank you for using !!!\e[0;0m"
-       echo ""
 sleep 0.5
 }
 lee-sleep
