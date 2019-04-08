@@ -1605,16 +1605,6 @@ sleep 5
        echo ""
 sleep 1
 }
-function lee-err () {
-sleep 0.5
-echo -e "\e[0;31mYour username checking in lee dzung systems. Please waiting..............\e[0;0m"
-sleep 5
-    echo -e "\e[0;32mChecked finished.\e[0;0m"
-       echo ""
-sleep 1
-echo -e "\e[0;31mUsername wrong or not registed yet. Please, contact admin\e[0;0m"
-echo -e "\e[0;31mTelegram: @LeeDzung\e[0;0m"
-}
 licence () {
 #if 0
 #endif
