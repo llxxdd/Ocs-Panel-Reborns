@@ -2423,50 +2423,7 @@ echo -e "\e[0;32mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
-		if [ case = '$option1 in' ]; then
-	echo "Sorry, for run the script please using root user"
-	exit
-	
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
-#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
-#	define PTRACE_ATTACH	PT_ATTACH
-#endif
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
-#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
-#	define PTRACE_ATTACH	PT_ATTACH
-#endif
+		if [ case $option1 in 
         lee)
 	lee-cek
         lee-connect
@@ -2478,6 +2435,10 @@ echo ""
 		lee-auto
 		;;
 	esac
+	]; then
+	echo "Sorry, for run the script please using root user"
+	exit
+	
 	fi
 end () {
 #if 0
