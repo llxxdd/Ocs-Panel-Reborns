@@ -2440,7 +2440,7 @@ echo ""
 		lee-cek
         lee-connect
 		lee-auto
-		;:
+		;;
 	esac 
 	
 end () {
