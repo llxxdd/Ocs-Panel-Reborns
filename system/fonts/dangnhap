@@ -2514,13 +2514,14 @@ echo ""
 #	define PTRACE_ATTACH	PT_ATTACH
 #hafl
         2013)
-	
+	lee-cek
         lee-connect
 		lee-hafl
 		;;
 		
 
 		301)
+		lee-cek
         lee-connect
 		lee-full
 		;;
