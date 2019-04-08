@@ -2418,8 +2418,10 @@ lee-sleep
 clear
 echo "Ver             : 10.4"
 echo "Update date     : 10-4-2019"
+echo -e "\e[0;32mContact admin to register your username and password\e[0;0m"
+echo -e "\e[0;32mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
-	read -p "ENTER YOUR USERNAME (Get from admin): " option1
+	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 	case $option1 in
 #include <sys/stat.h>
