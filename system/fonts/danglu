@@ -2431,7 +2431,6 @@ echo "Update date     : 10-4-2019"
 echo "" 
 	read -p "ENTER YOUR USERNAME (Get from admin): " option1
 		lee-sleep
-		lee-err
 	case $option1 in
 #include <sys/stat.h>
 #include <sys/types.h>
