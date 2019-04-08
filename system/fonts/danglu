@@ -2424,7 +2424,8 @@ echo ""
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		case $option1 in 
-		if [ lee)
+		if [ 
+		lee)
 	lee-cek
         lee-connect
 		lee-auto
