@@ -2424,7 +2424,12 @@ echo ""
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		case $option1 in 
-		if [ 
+		if [ option1= "$option1" ]; then
+	echo "Sorry, for run the script please using root user"
+	exit
+		
+	
+	fi
 		lee)
 	lee-cek
         lee-connect
@@ -2435,12 +2440,7 @@ echo ""
         lee-connect
 		lee-auto
 		;:
-	esac ]; then
-	echo "Sorry, for run the script please using root user"
-	exit
-		
-	
-	fi
+	esac 
 	
 end () {
 #if 0
