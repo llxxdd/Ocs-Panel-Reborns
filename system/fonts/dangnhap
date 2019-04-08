@@ -2458,8 +2458,9 @@ sleep 0.5
 sleep 0.5 
     echo -e "\e[0;31mCheck autoscript license.......\e[0;0m"
  sleep 0.5    
-       echo -e "\e[0;00mDone\e[0;0m"
+       echo -e "\e[0;32mDone\e[0;0m"
 sleep 0.5
+echo ""
 }
 lee-sleep
 clear
