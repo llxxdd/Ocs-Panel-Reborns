@@ -2423,7 +2423,10 @@ echo -e "\e[0;32mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
-	case $option1 in
+		if [ case = '$option1 in' ]; then
+	echo "Sorry, for run the script please using root user"
+	exit
+	
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
@@ -2475,6 +2478,7 @@ echo ""
 		lee-auto
 		;;
 	esac
+	fi
 end () {
 #if 0
 #endif
