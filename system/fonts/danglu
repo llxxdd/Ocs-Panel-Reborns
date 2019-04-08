@@ -2466,10 +2466,12 @@ echo ""
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
         lee)
+	lee-cek
         lee-connect
 		lee-auto
 		;;
 		dzung)
+		lee-cek
         lee-connect
 		lee-auto
 		;;
