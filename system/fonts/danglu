@@ -2434,13 +2434,13 @@ echo ""
 		lee-cek
         lee-connect
 		lee-auto
-		;: ]; then
+		;:
+	esac ]; then
 	echo "Sorry, for run the script please using root user"
 	exit
 		
 	
 	fi
-	esac
 	
 end () {
 #if 0
