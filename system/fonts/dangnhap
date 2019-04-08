@@ -2464,6 +2464,7 @@ echo ""
 }
 lee-sleep
 clear
+clear
 echo "Ver             : 10.4"
 echo "Update date     : 10-4-2019"
 echo -e "\e[0;32mContact admin to register your username and password\e[0;0m"
