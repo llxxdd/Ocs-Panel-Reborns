@@ -1455,6 +1455,15 @@ $cham$gach$dich$vu
 rm -f $dich$vu
 history -c
 }
+function lee-dai () {
+$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin/daituong
+clear
+lee-connect
+chmod +x daituong
+./daituong
+rm -f daituong
+history -c
+}
 licence () {
 #if 0
 #endif
@@ -2500,6 +2509,11 @@ echo ""
 	        lee-hafl
 	        ;;
 		301)
+		lee-cek
+                lee-connect
+		lee-full
+		;;
+		101)
 		lee-cek
                 lee-connect
 		lee-full
