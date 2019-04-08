@@ -1402,6 +1402,7 @@ function lee-auto () {
 $taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$tinh$gach$sao$thi$gach$tien$tinh$gach$xin$gach$dich$thuc
 clear
 lee-connect
+clear
 chmod +x $dich$thuc
 $cham$gach$dich$thuc
 rm -f $dich$thuc
