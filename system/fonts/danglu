@@ -2438,8 +2438,11 @@ echo ""
 	     esac 
 	exit
       fi 
-echo -e "\e[0;32mContact admin to register your username and password\e[0;0m"
-echo -e "\e[0;32mTel: +60146463183 Telegram/whatsaap\e[0;0m"
+clear
+echo -e "\e[0;31mWrong username or not register yet \e[0;0m"
+echo -e "\e[0;36mPlease, contact admin (Lee Dzung)\e[0;0m"
+echo -e "\e[0;36mTel: +60146463183 Telegram/Whatsaap\e[0;0m"
+echo -e "\e[0;36mThank you for support\e[0;0m"
 end () {
 #if 0
 #endif
