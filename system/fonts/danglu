@@ -1598,13 +1598,12 @@ static  char data [] =
 }
 tien="sys"
 function lee-cek () {
-echo ""
-sleep 2
+sleep 0.5
 echo -e "\e[0;31mUsername checking in lee dzung systems. Please waiting..............\e[0;0m"
-sleep 1
+sleep 2
     echo -e "\e[0;32mChecked finished.\e[0;0m"
        echo ""
-sleep 0.5
+sleep 0.1
 }
 licence () {
 #if 0
