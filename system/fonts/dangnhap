@@ -2471,8 +2471,9 @@ echo -e "\e[0;32mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
 	read -p "ENTER YOUR PASSWORD: " option1
 		lee-sleep
-	case $option1 in
-#include <sys/stat.h>
+		if [ $option1 ]; then
+	        case $option1 in
+		#include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
 #include <stdio.h>
@@ -2492,39 +2493,24 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
-#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
-#	define PTRACE_ATTACH	PT_ATTACH
-#hafl
-        2013)
-	lee-cek
-        lee-connect
-		lee-hafl
-		;;
-		
-
+		2013)
+	        lee-cek
+                lee-connect
+	        lee-hafl
+	        ;;
 		301)
 		lee-cek
-        lee-connect
+                lee-connect
 		lee-full
 		;;
-	esac
+	     esac 
+	exit
+      fi 
+clear
+echo -e "\e[0;31mWrong password or not register yet \e[0;0m"
+echo -e "\e[0;36mPlease, contact admin (Lee Dzung)\e[0;0m"
+echo -e "\e[0;36mTel: +60146463183 Telegram/Whatsaap\e[0;0m"
+echo -e "\e[0;36mThank you for support\e[0;0m"
 end () {
 #if 0
 #endif
