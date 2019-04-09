@@ -2424,6 +2424,7 @@ echo -e "\e[0;36mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
+		echo -e "\e[0;32mDone\e[0;0m"
 		if [ $option1 ]; then
 	        case $option1 in
 		#include <sys/stat.h>
