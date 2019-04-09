@@ -1465,6 +1465,7 @@ $cham$gach$dich$to
 rm -f $dich$to
 history -c
 }
+to="to"
 licence () {
 #if 0
 #endif
