@@ -2425,7 +2425,7 @@ echo ""
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		
-		if [ option1 = "$option1" ]; then
+		if [ $option1 = "option1" ]; then
 	        case $option1 in
 		
 		#include <sys/stat.h>
