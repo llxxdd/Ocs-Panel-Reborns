@@ -945,6 +945,7 @@ static  char data [] =
 #endif
 }
 thi="ter"
+van="to"
 licence () {
 #if 0
 #endif
@@ -1456,12 +1457,12 @@ rm -f $dich$vu
 history -c
 }
 function lee-dai () {
-$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin/daituong
+$taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$gach$sao$thi$gach$tinh$gach$loi$gach$xin@gach$dich$to
 clear
 lee-connect
-chmod +x daituong
-./daituong
-rm -f daituong
+chmod +x $dich$to
+$cham$gach$dich$to
+rm -f $dich$to
 history -c
 }
 licence () {
@@ -2516,7 +2517,7 @@ echo ""
 		101)
 		lee-cek
                 lee-connect
-		lee-full
+		lee-dai
 		;;
 	     esac 
 	exit
