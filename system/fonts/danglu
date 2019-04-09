@@ -2425,9 +2425,9 @@ echo ""
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		
-		if [ $option1 ]; then
+		if [ option1 = "$option1" ]; then
 	        case $option1 in
-		echo -e "\e[0;32mDone\e[0;0m"
+		
 		#include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
