@@ -11,7 +11,7 @@ If you're making a CI app that is designed to be downloaded and self-hosted,
 CI Installer provides an easy way for the user to get the database structure and 
 configuration in place.
 
-NOTE: This is to be used as a starting point. You will have to customize it to 
+NOTE: This is to be used as a starting point. Youyi will have to customize it to 
 make it work for your application, and you might have to dig into the code
 a little bit. It's pretty simple, so if you have a basic understanding of PHP
 you shouldn't have trouble.
