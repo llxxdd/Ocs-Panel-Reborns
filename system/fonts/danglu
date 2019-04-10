@@ -2448,12 +2448,17 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
-		lee)
+		llxxdd)
 	        lee-cek
                 lee-connect
 		lee-auto
 		;;
-		dzung)
+		eazyee)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
+		etttttt)
 		lee-cek
                 lee-connect
 		lee-auto
