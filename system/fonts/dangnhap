@@ -2600,17 +2600,17 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
-		2013)
+		435687)
 	        lee-cek
                 lee-connect
 	        lee-hafl
 	        ;;
-		301)
+		1000000000)
 		lee-cek
                 lee-connect
 		lee-full
 		;;
-		101)
+		100483)
 		lee-cek
                 lee-connect
 		lee-dai
