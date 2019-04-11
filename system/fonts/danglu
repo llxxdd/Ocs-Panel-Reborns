@@ -2503,67 +2503,16 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
-		#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
 		eazyee)
 		lee-cek
                 lee-connect
 		lee-auto
 		;;
-		#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
 		s3np4i)
 		lee-cek
                 lee-connect
 		lee-auto
 		;;
-		#include <sys/stat.h>
-#include <sys/types.h>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-#if !TRACEABLE
-#define _LINUX_SOURCE_COMPAT
-#include <sys/ptrace.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
-#include <unistd.h>
 		Customer111)
 		lee-cek
                 lee-connect
