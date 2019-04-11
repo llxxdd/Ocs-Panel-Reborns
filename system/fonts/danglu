@@ -1,3 +1,37 @@
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
 #!/bin/bash
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
@@ -2424,7 +2458,6 @@ echo -e "\e[0;36mTel: +60146463183 Telegram/whatsaap\e[0;0m"
 echo "" 
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
-		
 		if [ $option1 ]; then
 	        case $option1 in
 		
@@ -2448,6 +2481,23 @@ echo ""
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
 #	define PTRACE_ATTACH	PT_ATTACH
 #endif
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
 		llxxdd)
 	        lee-cek
                 lee-connect
@@ -2459,6 +2509,31 @@ echo ""
 		lee-auto
 		;;
 		s3np4i)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
+		;;
+		Customer111)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
+		Customer112)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;Customer113)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
+		Customer114)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
+		Customer115)
 		lee-cek
                 lee-connect
 		lee-auto
