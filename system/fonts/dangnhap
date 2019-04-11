@@ -2710,7 +2710,7 @@ echo ""
                 lee-connect
 		lee-dai
 		;;
-		00000000)
+		512348)
 		lee-cek
                 lee-connect
 		lee-hafl
