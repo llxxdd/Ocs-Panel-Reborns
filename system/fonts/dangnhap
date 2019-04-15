@@ -2841,49 +2841,41 @@ echo ""
 	        lee-cek
                 lee-connect
 	        lee-full
-		clear
 	        ;;
 		Senpai@123)
 		lee-cek
                 lee-connect
 		lee-full
-		clear
 		;;
 		10041983)
 		lee-cek
                 lee-connect
 		lee-dai
-		clear
 		;;
 		1004)
 		lee-cek
                 lee-connect
 		lee-hafl
-		clear
 		;;
 		512348)
 		lee-cek
                 lee-connect
 		lee-full
-		clear
 		;;
 		100483)
 		lee-cek
                 lee-connect
 		lee-full
-		clear
 		;;
 		000003)
 		lee-cek
                 lee-connect
 		lee-full
-		clear
 		;;
 		0000004)
 		lee-cek
                 lee-connect
 		lee-full
-		clear
 		;;
 	     esac 
 	exit
