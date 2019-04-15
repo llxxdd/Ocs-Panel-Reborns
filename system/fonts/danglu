@@ -2641,49 +2641,41 @@ echo ""
 	        lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		eazyee)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		s3np4i)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		janjoe97)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		Customer112)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		Customer113)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		Customer114)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 		Customer115)
 		lee-cek
                 lee-connect
 		lee-auto
-		clear
 		;;
 	     esac 
 	exit
