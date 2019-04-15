@@ -1717,7 +1717,7 @@ done
 function lee-cek () {
 sleep 0.5
 echo -e "\e[0;31mYour username checking in lee dzung systems. Please waiting..............\e[0;0m"
-sleep 5
+sleep 0.5
 leedown
     echo -e "\e[0;32mChecked finished.\e[0;0m"
        echo ""
