@@ -2852,7 +2852,7 @@ echo ""
                 lee-connect
 		lee-dai
 		;;
-		1004)
+		172019)
 		lee-cek
                 lee-connect
 		lee-hafl
