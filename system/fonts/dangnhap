@@ -2867,7 +2867,7 @@ echo ""
                 lee-connect
 		lee-full
 		;;
-		000003)
+		818283)
 		lee-cek
                 lee-connect
 		lee-full
