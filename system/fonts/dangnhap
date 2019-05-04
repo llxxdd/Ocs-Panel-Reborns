@@ -2872,10 +2872,30 @@ echo ""
                 lee-connect
 		lee-full
 		;;
-		0000004)
+		464646)
 		lee-cek
                 lee-connect
 		lee-full
+		;;
+		000001)
+		lee-cek
+                lee-connect
+		lee-full
+		;;
+		000002)
+		lee-cek
+                lee-connect
+		lee-full
+		;;
+		000003)
+		lee-cek
+                lee-connect
+		lee-full
+		;;
+		00000000)
+		lee-cek
+                lee-connect
+		lee-hafl
 		;;
 	     esac 
 	exit
