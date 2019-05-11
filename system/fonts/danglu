@@ -2672,6 +2672,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+		Myzing)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
 		Customer115)
 		lee-cek
                 lee-connect
