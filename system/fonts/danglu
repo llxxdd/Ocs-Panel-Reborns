@@ -2677,6 +2677,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+                Aiman)
+		lee-cek
+                lee-connect
+		lee-auto
+		;; 
 		Customer115)
 		lee-cek
                 lee-connect
