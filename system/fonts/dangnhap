@@ -2882,7 +2882,7 @@ echo ""
                 lee-connect
 		lee-full
 		;;
-		000002)
+		cbv50122)
 		lee-cek
                 lee-connect
 		lee-full
