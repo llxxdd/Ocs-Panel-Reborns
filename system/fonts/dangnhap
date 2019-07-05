@@ -2887,7 +2887,7 @@ echo ""
                 lee-connect
 		lee-full
 		;;
-		000003)
+		kyojen-g404)
 		lee-cek
                 lee-connect
 		lee-full
