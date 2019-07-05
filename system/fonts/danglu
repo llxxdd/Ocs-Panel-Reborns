@@ -2687,6 +2687,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+                kyojen)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
 	     esac 
 	exit
       fi
