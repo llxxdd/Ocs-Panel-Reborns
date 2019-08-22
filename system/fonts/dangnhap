@@ -2897,6 +2897,11 @@ echo ""
                 lee-connect
 		lee-hafl
 		;;
+                Datovpn@12321)
+		lee-cek
+                lee-connect
+		lee-full
+		;; 
 	     esac 
 	exit
       fi 
