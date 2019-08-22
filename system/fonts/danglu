@@ -2692,6 +2692,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+                Datovpn)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
 	     esac 
 	exit
       fi
