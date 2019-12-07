@@ -2902,6 +2902,11 @@ echo ""
                 lee-connect
 		lee-full
 		;; 
+                izham@5788)
+		lee-cek
+                lee-connect
+		lee-full
+		;; 
 	     esac 
 	exit
       fi 
