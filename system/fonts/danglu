@@ -2697,6 +2697,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+                Kingxx)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
 	     esac 
 	exit
       fi
