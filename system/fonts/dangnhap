@@ -2906,6 +2906,11 @@ echo ""
 		lee-cek
                 lee-connect
 		lee-full
+		;;
+                Boniface@13579)
+		lee-cek
+                lee-connect
+		lee-full
 		;; 
 	     esac 
 	exit
