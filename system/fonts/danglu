@@ -2697,6 +2697,11 @@ echo ""
                 lee-connect
 		lee-auto
 		;;
+                Boniface)
+		lee-cek
+                lee-connect
+		lee-auto
+		;;
                 Kingxmyplace)
 		lee-cek
                 lee-connect
